@@ -2,7 +2,7 @@ import { restore } from "__support__/e2e/helpers/e2e-setup-helpers";
 import { SAMPLE_DATASET } from "__support__/e2e/cypress_sample_dataset";
 import {
   modal,
-  popover,
+  tippyPopover,
 } from "__support__/e2e/helpers/e2e-ui-elements-helpers";
 import { describeWithToken } from "__support__/e2e/cypress";
 
@@ -193,7 +193,7 @@ function testEditingRecipients({ editModalHeader }) {
     cy.get("input").click();
   });
 
-  popover().within(() => {
+  tippyPopover().within(() => {
     cy.findByText("No Data Tableton").click(); // Add No Data Tableton user
   });
 
